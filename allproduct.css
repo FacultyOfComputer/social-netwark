@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2014, 6:00:06 PM
+    Author     : abanoub wagih
+*/
+
+body , html{
+   height: 100%;
+   background: linear-gradient(to right, #C4C4C4 ,#ffffff  ,#ffffff ,#C4C4C4);
+}
+.holding{
+    width: 1200px;
+    margin: 10px auto ;
+    height: 100%;
+   
+}
+
+.holding div{ width:350px;
+              background:rgb(0,80,125); 
+             float:left;
+             margin: 20px 0 20px 20px; padding:0 5px; 
+             height: 433px;
+             overflow :hidden;
+             display: inline-block;
+             border:  5px solid black;
+}
+.holding div div{
+    
+    border: none;
+}	
+.holding div h1 {color:#FFF; font-size:24px;}
+
+.holding div hr{width:80%; margin-left:-1px; border-color:#000;}
+
+.holding div p{ font-size:80% ; color:rgb(0,0,0); line-height:140%; }
+.holding div p:last-child{font-size:120% ; color:rgb(255,255,255); line-height:140%;}
+.holding div p span{ font-size:16px; color:#F00;}
+
+.holding img{  width:288px; height:182px; border:#000 4px solid; margin: 5px 20px ; float:none;}

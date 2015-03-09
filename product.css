@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2014, 5:58:37 PM
+    Author     : abanoub wagih
+*/
+
+#product {
+
+    padding: 10px 50px;
+}
+#product div{
+    float: left;
+    margin: 10px 100px;
+    
+}
+#product div img{
+    max-width: 300px;
+    max-height: 400px;
+}
+#product div:last-child{
+    border: 10px solid  #01517E;
+    border-radius: 50px;
+}
+#product div table ,tr,td{
+     padding: 20px;
+    text-align: left;
+}
+#product table td{
+    max-width: 200px;
+}
+#product table td:first-child {
+ 
+    color: #0033cc;
+}
+#product table tr:first-child td:first-child{
+    text-align: center;
+    font-size: 40px;
+    color: #cc0000;
+}
+#productForm {
+    clear: both;
+    display: block;
+    position: relative;
+    padding:  50px 400px;
+    font-size: 20px;
+    font-style: italic;
+   
+    background: linear-gradient(#E8E8E8, white, #E8E8E8);
+}

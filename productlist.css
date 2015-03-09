@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2014, 7:25:46 PM
+    Author     : abanoub wagih
+*/
+body{
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+}
+a{
+    text-decoration: none;
+}
+.container{
+     width: 95%;
+     min-height: 800px;
+
+     background: white ;
+     background-image: url(../image/listproduct/white-swirls-twitter-background.jpg);
+    
+     border: 20px solid #F7F7F7 ;
+     border-color:   #e2e2e2;
+     border-radius: 20px;
+     
+     margin:  auto;
+}
+.container h1{
+    font-size: 80px;
+    font-style: italic ;  
+    color: white;
+    width: 500px;
+    margin: 20px auto;
+}
+aside{
+    
+    min-height: 100px;
+    width: 202px;
+    margin: 10px;
+    border:0; 
+    padding:0;
+    text-align:center;
+}
+aside ul{
+    padding: 60px 25px;
+    list-style-type: none;
+    
+}
+
+aside ul li{
+    background:  linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%);
+    width: 200px;
+    height: 50px;
+    margin: 10px 0;
+    color: white;
+    text-align: center; 
+    line-height: 50px;
+}
+
+aside ul li:hover{
+    font-size: 200%;
+    background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
+    cursor: pointer;
+}
+/* for all product */
+aside ul a li{
+background: linear-gradient(to bottom, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);    
+}
+
+aside ul a li:hover{
+    background: linear-gradient(to bottom, #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%);
+}
+
+/* second coulm */
+#two  {
+    display: none;
+    margin-left: 180px;
+    margin-top: -110px;
+    list-style-type: none;
+    
+}
+aside ul li:hover #two{
+    display: block;
+}
+
+#two li {
+    
+    width: 250px;
+    height: 70px;
+    margin: 0;
+}
+
+/* three level */
+#three  {
+    display: none;
+    margin-left: 230px;
+    margin-top: -110px;
+    list-style-type: none;
+}
+
+#two li:hover #three{
+    display: block;
+}
+#three a li {
+    
+    width: 650px;
+    height: 70px;
+    margin: 0;
+    font-size: 60%;
+}

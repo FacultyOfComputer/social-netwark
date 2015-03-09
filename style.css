@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 24, 2014, 11:35:02 PM
+    Author     : abanoub wagih
+*/
+body , html ,a,h1,p,li{
+    margin: 0;
+    padding: 0;
+    font-family: Fertigo,cursive;
+}
+header{
+    background: #ffffff url(../image/backgroundHeader.png) repeat-x ;
+        height: 150px;
+        margin-top: -5px;
+        margin-bottom: 0;
+}
+header h1{
+    
+    font-size: 60px;
+    float: left;
+    color: #7f52d8;
+    font-family: tahoma,sans-serif;
+    margin: 34px 10px;
+    text-shadow: 10px 5px 5px #888888
+}
+header img{
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin: -120px  10px 0 10px;
+    
+}
+header:hover img{
+    float: right;
+    width: 150px;
+    height: 150px;
+    margin: -140px  10px 0 10px;
+    
+}
+	
+menu{ height:35px; background:url(../image/bgMenu.png) repeat-x; 
+      margin: 0 0 20px 0;  text-align:center; border:0; padding:0;}
+
+menu ul {background:url(../image/bgMenu.png) repeat-x;  }
+
+menu li{ line-height:35px; float:left;  min-width: 130px;  padding: 0 20px 0 30px; list-style-type:none;}
+
+menu li a { color:#FFF; font-size:20px;  text-decoration: none; font-style:italic;}
+
+menu li:hover{background-color:#FFF; cursor:pointer; background-image:none;}
+
+menu li:hover a{color:#000;}
+
+menu li ul {display:none; margin:0; padding:0; }
+
+menu li:hover ul {display:block;  z-index:9999; width:300px ; position:absolute; }
+
+menu li li{background:url(../image/bgMenu.png) repeat-x; margin-left:-30px; color: #fff;width:300px; }
+
+menu li a:hover{background-color:#FFF; cursor:pointer; background-image:none; }	
+menu li a:hover li{color: #000;}
