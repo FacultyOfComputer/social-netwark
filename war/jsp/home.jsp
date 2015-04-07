@@ -22,9 +22,9 @@
   </form>
   
   <a href="/social/search/">search</a> <br><br>
-
-
-
+  <a href="/social/add/">add friend</a> <br><br>
+ <a href="/social/conversation/">chat Group</a> <br><br>
+<a href="/social/SendMeassage/">chat</a> <br><br>
  
 
 

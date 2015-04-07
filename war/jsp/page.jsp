@@ -13,7 +13,7 @@
 <body>
 
     <p>  ${it.name} home page </p>
-    <form action="/social/add" method="post">
+    <form action="/social/addFriend" method="post">
   name : <input type="text" name="uname" value="${it.name} " /> <br>
   yourname: <input type="text" name="name1" /> <br>
    <input type="submit" value="add frind"> 

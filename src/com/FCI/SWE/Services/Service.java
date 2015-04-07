@@ -25,6 +25,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.FCI.SWE.Controller.Conversation;
+import com.FCI.SWE.Controller.MessageObserver;
+import com.FCI.SWE.Models.MessageEntity;
 import com.FCI.SWE.Models.UserEntity;
 
 /**
@@ -116,7 +119,7 @@ public class Service {
 			object.put("name", user.getName());
 			object.put("email", user.getEmail());
 			object.put("password", user.getPass());
-			object.put("name", user.getName());
+			//object.put("name", user.getName());
 		}
 
 		return object.toString();
@@ -134,7 +137,8 @@ public class Service {
 	 */
 	@POST
 	@Path("/AcceptService")
-	public String AcceptService(@FormParam("uname") String uname , @FormParam("fname") String fname) {
+	public String AcceptService(@FormParam("uname") String uname , @FormParam("fname") String fname) 
+	{
 		JSONObject object = new JSONObject();
 		UserEntity user = new UserEntity( uname,fname);
 				user.AcceptFriend( );
@@ -175,6 +179,64 @@ public class Service {
 			object.put("email", user.getEmail());
 			object.put("password", user.getPass());
 		}
+
+		return object.toString();
+
+	}
+	@POST
+	@Path("/messageService")
+	public String messageService(@FormParam("sender") String sender,
+			@FormParam("reciver") String reciver,@FormParam("msg") String msg) 
+	{
+		JSONObject object = new JSONObject();
+		
+		UserEntity user = UserEntity.getsearch(sender);
+		UserEntity user1 = UserEntity.getsearch(reciver);
+		
+				
+		 
+		 
+		if (user == null&&user1==null) {
+			object.put("Status", "Failed");
+
+		} else {
+			object.put("Status", "OK");
+			MessageEntity user2 = new MessageEntity ( msg,user.getID(),user1.getID());
+			user2.saveMessage();
+			
+		}
+
+		return object.toString();
+
+	}
+	@POST
+	@Path("/coversationservice")
+	public String coversationservice(@FormParam("sender") String sender,
+			@FormParam("reciver1") String reciver1,
+			@FormParam("reciver2") String reciver2,
+			@FormParam("reciver3") String reciver3,
+			@FormParam("Message") String message){
+	
+		JSONObject object = new JSONObject();
+		
+		UserEntity user = UserEntity.getsearch(sender);
+		UserEntity user1 = UserEntity.getsearch(reciver1);
+		UserEntity user2 = UserEntity.getsearch(reciver2);
+		UserEntity user3 = UserEntity.getsearch(reciver3);
+		if (user == null &&user1 == null &&user2 == null &&user3 == null) {
+			object.put("Status", "Failed");
+
+		} else {
+			object.put("Status", "OK");
+			MessageObserver obj1=new MessageObserver(user1.getID());
+			MessageObserver obj2=new MessageObserver(user2.getID());
+			MessageObserver obj3=new MessageObserver(user3.getID());
+			Conversation obj=new Conversation();
+			obj1.setconv(obj);
+			obj2.setconv(obj);
+			obj3.setconv(obj);
+			obj.setstate(message);
+			}
 
 		return object.toString();
 

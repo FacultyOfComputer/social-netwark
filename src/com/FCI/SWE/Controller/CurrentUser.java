@@ -7,6 +7,7 @@ package com.FCI.SWE.Controller;
 public class CurrentUser {
 	public String name;
 	public String password;
+	public int ID;
 
 	public static CurrentUser user = null;
 	
@@ -17,6 +18,9 @@ public class CurrentUser {
 }
 	public String getName() {
 		return name;
+	}
+	public int getID() {
+		return ID;
 	}
 	public void setName(String name) {
 		this.name = name;

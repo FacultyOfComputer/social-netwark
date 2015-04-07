@@ -30,7 +30,8 @@ public class UserEntity {
 	private String email;
 	private String password;
 	private String name2;
-
+	private String msg;
+    private int id;
 	/**
 	 * Constructor accepts user data
 	 * 
@@ -45,6 +46,7 @@ public class UserEntity {
 		this.name = name;
 		this.email = email;
 		this.password = password;
+		 
 
 	}
 
@@ -69,7 +71,12 @@ public class UserEntity {
 	public String getPass() {
 		return password;
 	}
-
+	public String getMsg() {
+		return msg;
+	}
+	public int getID() {
+		return id;
+	}
 	/**
 	 * 
 	 * This static method will form UserEntity class using json format contains
@@ -85,7 +92,7 @@ public class UserEntity {
 		try {
 			JSONObject object = (JSONObject) parser.parse(json);
 			return new UserEntity(object.get("name").toString(), object.get(
-					"email").toString(), object.get("password").toString());
+					"email").toString(), object.get("password").toString() );
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -116,7 +123,7 @@ public class UserEntity {
 			if (entity.getProperty("name").toString().equals(name)) {
 				UserEntity returnedUser = new UserEntity(entity.getProperty(
 						"name").toString(), entity.getProperty("email")
-						.toString(), entity.getProperty("password").toString());
+						.toString(), entity.getProperty("password").toString() );
 				return returnedUser;
 			}
 		}
@@ -154,6 +161,7 @@ public class UserEntity {
 		employee.setProperty("name", this.name);
 		employee.setProperty("email", this.email);
 		employee.setProperty("password", this.password);
+		employee.setProperty("msg", this.msg);
 		datastore.put(employee);
 
 		return true;
@@ -227,7 +235,7 @@ public class UserEntity {
 					&& entity.getProperty("password").toString().equals(pass)) {
 				UserEntity returnedUser = new UserEntity(entity.getProperty(
 						"name").toString(), entity.getProperty("email")
-						.toString(), entity.getProperty("password").toString());
+						.toString(), entity.getProperty("password").toString() );
 				return returnedUser;
 			}
 		}
